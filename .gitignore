@@ -1,0 +1,55 @@
+# Credentials
+config/exness_credentials.yaml
+.env
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# ML Models
+ml_models/*.h5
+ml_models/*.pth
+ml_models/*.pkl
+ml_models/*.joblib
+
+# Logs
+logs/
+*.log
+
+# Data
+data/
+*.csv
+*.feather
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# C++
+cpp/build/
+cpp/bin/
+*.o
+*.a
+
+# Backtest
+backtest_results/
