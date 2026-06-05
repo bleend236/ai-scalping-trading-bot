@@ -1,0 +1,48 @@
+# AI Scalping Trading Bot - Configuration
+
+strategy:
+  mode: "demo"
+  timeframe: 5
+  symbols:
+    - EURUSD
+    - GBPUSD
+    - USDJPY
+  
+  max_open_positions: 1
+  trading_hours: "08:00-16:00"
+  
+risk_management:
+  initial_capital: 100.0
+  max_position_size: 0.01
+  risk_per_trade: 0.02
+  max_daily_loss: 5.0
+  max_drawdown_percent: 15.0
+  
+  stop_loss_pips: 25
+  take_profit_pips: 50
+  
+ml_models:
+  lstm:
+    enabled: true
+    lookback_periods: 60
+    prediction_horizon: 5
+    retrain_frequency: 24
+    
+  sentiment:
+    enabled: true
+    update_frequency: 60
+    sentiment_threshold: 0.6
+    
+  reinforcement_learning:
+    enabled: true
+    algorithm: "PPO"
+    learning_rate: 0.0003
+
+monitoring:
+  log_level: "INFO"
+  log_file: "logs/trading.log"
+  
+  dashboard:
+    enabled: true
+    port: 5000
+    refresh_interval: 5
